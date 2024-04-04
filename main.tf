@@ -1,4 +1,4 @@
 resource "random_password" "secret" {
-  length  = 50
+  length  = 500
   special = true
 }
