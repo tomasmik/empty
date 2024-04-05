@@ -12,3 +12,8 @@ resource "aws_s3_bucket" "example" {
     Environment = "Dev"
   }
 }
+
+
+variable "bucket_name" {
+  type = string
+}
