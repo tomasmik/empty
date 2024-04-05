@@ -1,5 +1,6 @@
-resource "random_password" "secret" {
-  length  = 50
-  special = true
-  override_special = var.aws_role_arn
+provider "aws" {
+  assume_role_with_web_identity {
+    role_arn = var.aws_role_arn
+    web_identity_token_file = "/mnt/workspace/spacelift.oidc"
+  }
 }
