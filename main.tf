@@ -24,3 +24,9 @@ resource "aws_s3_bucket" "example" {
 variable "bucket_name" {
   type = string
 }
+
+resource "random_string" "random" {
+  length           = 16
+  special          = true
+  override_special = "/@£$"
+}
