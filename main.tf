@@ -7,6 +7,13 @@ terraform {
   }
 }
 
+provider "aws" {
+  region = "us-east-1"
+}
+
+variable "bucket_name" {
+  type = string
+}
 
 resource "random_string" "random" {
   length           = 16
