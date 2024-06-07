@@ -27,3 +27,4 @@ resource "aws_dynamodb_table" "example" {
     type = "S"
   }
 }
+
