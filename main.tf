@@ -14,6 +14,10 @@ provider "aws" {
 resource "aws_s3_bucket" "example" {
   bucket = "example-bucket-terraform"
   acl    = "private"
+
+  versioning {
+    enabled = true
+  }
 }
 
 resource "aws_dynamodb_table" "example" {
