@@ -11,19 +11,19 @@ provider "aws" {
   region = "us-east-1"
 }
 
-variable "bucket_name" {
-  type = string
+resource "aws_s3_bucket" "example" {
+  bucket = "example-bucket-terraform"
+  acl    = "private"
 }
 
-resource "random_string" "random" {
-  length           = 16
-  special          = true
-  override_special = "/@£$"
-}
+resource "aws_dynamodb_table" "example" {
+  name           = "example-table"
+  billing_mode   = "PAY_PER_REQUEST"
 
-resource "random_string" "random2" {
-  length           = 16
-  special          = true
-  override_special = "/@£$"
-}
+  hash_key       = "id"
 
+  attribute {
+    name = "id"
+    type = "S"
+  }
+}
