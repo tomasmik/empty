@@ -1,18 +1,34 @@
-resource "random_string" "random" {
-  length           = 12
-  special          = true
-  override_special = "/@£$"
+terraform {
+  required_providers {
+    spacelift = {
+      source = "spacelift.io/spacelift-io/spacelift"
+    }
+  }
 }
 
-resource "random_string" "random2" {
-  length           = 11
-  special          = true
-  override_special = "/@£$"
+resource "spacelift_space" "dev-test99999" {
+  name = "terraform-dev-teaaata"
+  parent_space_id = "root"
 }
 
+resource "spacelift_space" "dev-test888" {
+  name = "terraform-dev-teaaahgta"
+  parent_space_id = "root"
+}
 
-resource "random_string" "random3" {
-  length           = 13
-  special          = true
-  override_special = "/@£$"
+resource "spacelift_space" "dev-test" {
+  name = "terraform-dev-teaaaaata"
+  parent_space_id = "root"
+}
+
+output "spacelift_space_dev_test99999_id" {
+  value = spacelift_space.dev-test99999.id
+}
+
+output "spacelift_space_dev_test888_id" {
+  value = spacelift_space.dev-test888.id
+}
+
+output "spacelift_space_dev_test_id" {
+  value = spacelift_space.dev-test.id
 }
