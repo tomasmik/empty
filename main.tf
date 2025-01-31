@@ -23,6 +23,7 @@ resource "spacelift_space" "dev-test" {
 
 output "spacelift_space_dev_test99999_id" {
   value = spacelift_space.dev-test99999.id
+  description = "asdf"
 }
 
 output "spacelift_space_dev_test888_id" {
