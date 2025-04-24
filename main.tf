@@ -13,7 +13,7 @@ resource "spacelift_space" "dev-test" {
 }
 
 resource "spacelift_space" "dev-testt" {
-  name = "terraform-dev-local2"
+  name = "terraform-dev-locaal2"
   parent_space_id = "root"
 }
 
