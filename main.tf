@@ -7,7 +7,7 @@ terraform {
 }
 
 
-resource "spacelift_space" "dev-test" {
+resource "spacelift_space" "dev-testtt" {
   name = "terraform-dev-local1"
   parent_space_id = "root"
 }
