@@ -1,5 +1,4 @@
 version: "2"
 
-stacks:
-    123:
-      terraform_version: 0.12.4
+stack_defaults:
+  terraform_version: 0.12.4
