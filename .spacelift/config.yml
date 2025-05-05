@@ -1,10 +1,5 @@
 version: "2"
 
 stack_defaults:
-    # Note that tflint is not installed by
-    # default - this example assumes that your
-    # runner image has this available.
-    before_init:
-        - echo "checking formatting"
-        - terraform fmt -diff
-        - tflint
+    terraform_version: 1.5.0
+
