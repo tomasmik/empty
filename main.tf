@@ -8,7 +8,7 @@ terraform {
 
 
 resource "spacelift_space" "dev-test" {
-  name = "terraform-dev-local1"
+  name = "terraform-dev-loca l1"
   parent_space_id = "root"
 }
 
