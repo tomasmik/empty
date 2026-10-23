@@ -1,6 +1,6 @@
 11
 1
-terraform {
+terraform {  
   required_providers {
     spacelift = { 
       source = "spacelift.io/spacelift-io/spacelift"
